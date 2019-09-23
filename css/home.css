@@ -97,36 +97,6 @@ ul.res {
   }
 }
 
-@-webkit-keyframes press {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes press {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 .noBg {
   background-color: transparent !important;
 }
@@ -1623,8 +1593,7 @@ ul.res {
   width: -moz-max-content;
   width: max-content;
   margin-top: 25px;
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+  width: max-content;
 }
 
 .head .search.open {
@@ -1822,7 +1791,7 @@ ul.res {
 
 @media (min-width: 1200px) {
   .head .search button {
-    left: 30px;
+    left: 10px;
   }
 }
 
@@ -1875,8 +1844,15 @@ ul.res {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+  width: 260px;
+}
+
+@media (max-width: 991px) {
+  .head .menu {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .head .menu > div {
@@ -2258,7 +2234,7 @@ ul.res {
 }
 
 .categories {
-  padding: 33px 0 0;
+  padding: 33px 0 15px;
 }
 
 @media (max-width: 991px) {
@@ -2366,7 +2342,7 @@ ul.res {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .disc.custom .disc-head > p {
@@ -2472,7 +2448,7 @@ ul.res {
 
 .disc.custom .owl-carousel .owl-nav button:hover {
   background-color: transparent;
-  border: 2px solid #c1964d;
+  border: 2px solid #0d0d0d;
   border-right: none;
   border-bottom: none;
 }
@@ -2529,7 +2505,7 @@ ul.res {
 }
 
 .product .pic {
-  height: 291px;
+  height: 290px;
   position: relative;
   border: 1px solid #f2f2f2;
   overflow: hidden;
@@ -2644,14 +2620,9 @@ ul.res {
   text-align: center;
 }
 
-.boxes .box:hover img {
-  -webkit-animation: press .5s linear;
-          animation: press .5s linear;
-}
-
 .boxes .box .pic {
   height: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 17px;
 }
 
 .boxes .box img {
@@ -2775,6 +2746,8 @@ footer .foot-links ul li:not(:last-child) {
 footer .foot-links a {
   font-size: 14px;
   font-family: "frt";
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   color: #f9d392;
   -webkit-transition: .5s;
   transition: .5s;

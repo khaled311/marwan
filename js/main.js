@@ -126,6 +126,7 @@ $(function() {
   if($(window).width() < 992){
     $("#aosLink").remove();
     $("#aosScript").remove();
+    $("html").css("overflow-x", "auto");
   }else{
     AOS.init();
   }
